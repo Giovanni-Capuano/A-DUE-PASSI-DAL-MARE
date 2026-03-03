@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Casa al Mare – A due passi dal mare</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
+
+    <style>
+        /* Scorrimento fluido */
+        html { scroll-behavior: smooth; }
+
+        body { margin: 0; font-family: Arial, sans-serif; background: #e9f7ff; color: #333; }
+        header { background: #0099cc; color: white; padding: 40px 20px; text-align: center; }
+        header h1 { margin: 0; font-size: 2.5rem; }
+        
+        /* Barra di Navigazione Sticky */
+        .navbar-sezioni {
+            background-color: #ffffff;
+            text-align: center;
+            padding: 15px 0;
+            border-bottom: 2px solid #0099cc;
+            position: sticky; 
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .navbar-sezioni a {
+            text-decoration: none;
+            color: #0099cc;
+            font-weight: bold;
+            margin: 0 15px;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+        .navbar-sezioni a:hover {
+            color: #1923ee;
+        }
+
+        main { max-width: 1100px; margin: auto; padding: 20px; }
+
+        /* SISTEMA IL TITOLO COPERTO: aggiunge spazio sopra quando si clicca il menu */
+        h2 { 
+            border-left: 6px solid rgba(249, 184, 0); 
+            padding-left: 10px; 
+            margin-top: 40px; 
+            scroll-margin-top: 80px; 
+        }
+        
+        /* Griglia Galleria */
+        .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; margin-top: 20px; }
+        .gallery a { position: relative; display: block; overflow: hidden; border-radius: 8px; text-decoration: none; }
+        .gallery img { width: 100%; height: 220px; object-fit: cover; transition: transform 0.3s; display: block; }
+        .gallery a:hover img { transform: scale(1.05); }
+
+        .more-photos-overlay {
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: rgba(0, 0, 0, 0.5); 
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            pointer-events: none; 
+        }
+
+        .video-box { margin-top: 20px; }
+        video { width: 100%; border-radius: 10px; }
+        footer { background: #0077aa; color: white; text-align: center; padding: 20px; margin-top: 40px; }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>A DUE PASSI DAL MARE</h1>
+</header>
+
+<nav class="navbar-sezioni">
+    <a href="#benvenuti">BENVENUTI</a>
+    <a href="#mappa">DOVE SIAMO</a>
+    <a href="#galleria">FOTO</a>
+    <a href="#video">VIDEO TOUR</a>
+    <a href="#servizi">SERVIZI</a>
+    </nav>
+
+<main>
+    <h2 id="benvenuti">Benvenuti</h2>
+    <p>
+        Una splendida casa affacciata sul mare, immersa nella tranquillità e nella luce del Mediterraneo.
+    </p>
+
+    <h2 id="mappa">Dove Siamo</h2>
+    <p>
+        📍 1 Via dei Platani, 74024 San Pietro in Bevagna, Italia 
+        <a href="https://www.google.com/maps/search/?api=1&query=1+Via+dei+Platani+74024+San+Pietro+in+Bevagna" 
+           target="_blank" 
+           rel="noopener noreferrer"
+           style="color: #0099cc; text-decoration: none;">
+           <b>(Link a google maps!)</b>
+        </a>
+    </p>
+
+   <h2 id="galleria">Foto della casa</h2>
+<div class="gallery">
+
+    <a href="https://cf.bstatic.com/xdata/images/hotel/max1024x768/428242207.jpg?k=a83b9241150b1538be859750595aaac854fe06e1fa0a945dc80f32f7e683d096&o=" data-fancybox="gallery">
+        <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/428242207.jpg?k=a83b9241150b1538be859750595aaac854fe06e1fa0a945dc80f32f7e683d096&o=" alt="Casa 1">
+    </a>
+
+    <a href="https://cf.bstatic.com/xdata/images/hotel/max1024x768/428242295.jpg?k=45a5556fd688ad77844e7f235e8121decc704567904d25d0e36792ad6ce3523f&o=" data-fancybox="gallery">
+        <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/428242295.jpg?k=45a5556fd688ad77844e7f235e8121decc704567904d25d0e36792ad6ce3523f&o=" alt="Casa 2">
+    </a>
+
+    <a href="https://cf.bstatic.com/xdata/images/hotel/max1024x768/428242335.jpg?k=c15ce184155b946c5e96cf473537c9c2d70d470bbefd25c314e4b0f812fcf773&o=" data-fancybox="gallery">
+        <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/428242335.jpg?k=c15ce184155b946c5e96cf473537c9c2d70d470bbefd25c314e4b0f812fcf773&o=" alt="Casa 3">
+    </a>
+
+    <a href="https://cf.bstatic.com/xdata/images/hotel/max1024x768/428242319.jpg?k=590e0f117ddc590caa54f317676d7f47b9a4893727fb21660aa34145141427ce&o=" data-fancybox="gallery">
+        <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/428242319.jpg?k=590e0f117ddc590caa54f317676d7f47b9a4893727fb21660aa34145141427ce&o=" alt="Casa 4">
+    </a>
+
+    <a href="https://cf.bstatic.com/xdata/images/hotel/max1024x768/428242308.jpg?k=682bd8918b71d141de48e66d7f2ddb6655c88751a943af6087810912f62749f4&o=" data-fancybox="gallery">
+        <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/428242308.jpg?k=682bd8918b71d141de48e66d7f2ddb6655c88751a943af6087810912f62749f4&o=" alt="Interno">
+    </a>
+
+    <a href="https://cf.bstatic.com/xdata/images/hotel/max1024x768/428242214.jpg?k=777436ae457b63f2a3c1af319e9a1b16ef9d8a6f6dda5f09570ded41b1eb3c58&o=" data-fancybox="gallery">
+        <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/428242214.jpg?k=777436ae457b63f2a3c1af319e9a1b16ef9d8a6f6dda5f09570ded41b1eb3c58&o=" alt="Esterno">
+    </a>
+
+    <a href="https://cf.bstatic.com/xdata/images/hotel/max1024x768/428242291.jpg?k=d35c004542578ae21251155656405809e5a357cd586763b895c5b3739407a32e&o=" data-fancybox="gallery">
+        <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/428242291.jpg?k=d35c004542578ae21251155656405809e5a357cd586763b895c5b3739407a32e&o=" alt="Camera">
+    </a>
+
+    <a href="https://cf.bstatic.com/xdata/images/hotel/max1024x768/428242323.jpg?k=cd1fc33b237f69bd2e24785df5fd51f20d6083f52d943c15d7aa63f795f8b932&o=" data-fancybox="gallery">
+        <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/428242323.jpg?k=cd1fc33b237f69bd2e24785df5fd51f20d6083f52d943c15d7aa63f795f8b932&o=" alt="Mare">
+        <div class="more-photos-overlay"><u>Altre Foto</u></div>
+    </a>
+
+    <div style="display:none">
+        <a href="https://cf.bstatic.com/xdata/images/hotel/max1024x768/428242326.jpg?k=2a7841b90b0172bdee0396f01b23c4f2289fbc5e9d83e7c38964a881cc944d26&o=" data-fancybox="gallery"></a>
+        <a href="https://cf.bstatic.com/xdata/images/hotel/max1024x768/481657239.jpg?k=2ee098262922dbbe8473d807b29cead35825f85e58ba0ec02ee3587fd678ae72&o=" data-fancybox="gallery"></a>
+        <a href="https://cf.bstatic.com/xdata/images/hotel/max1024x768/481657289.jpg?k=69fba768637b597039bdd5bbe5253c280ed3d5492e9dc3890e72d0197f5f5b83&o=" data-fancybox="gallery"></a>
+        <a href="https://cf.bstatic.com/xdata/images/hotel/max1024x768/481657358.jpg?k=70439d84f23dfd523c2527fc29b0ac0e5a91cd1fc65e61f8cca5aeae72088bb0&o=" data-fancybox="gallery"></a>
+        <a href="https://cf.bstatic.com/xdata/images/hotel/max1024x768/481657220.jpg?k=ca75c6b5e91b2e051af755a8208df9ef56fc84689a457b7f16f213d559bc57c0&o=" data-fancybox="gallery"></a>
+        <a href="https://cf.bstatic.com/xdata/images/hotel/max1024x768/481657321.jpg?k=c9f453ae7f4e01fc5cabf7c5cb795666fc139cca5aea1957e288da13e6afef3a&o=" data-fancybox="gallery"></a>
+        <a href="https://cf.bstatic.com/xdata/images/hotel/max1024x768/481657344.jpg?k=9b2fcd5a7a74ed3f1a071b3497fbc72354f1ab8ed427424254b40f7ba25c7473&o=" data-fancybox="gallery"></a>
+        <a href="https://cf.bstatic.com/xdata/images/hotel/max1024x768/481657137.jpg?k=f98ee7c49e45fcc39c08e8d800d3bce215dc86e5ddebd7500e2bd6d41bd5aac1&o=" data-fancybox="gallery"></a>
+        <a href="https://cf.bstatic.com/xdata/images/hotel/max1024x768/481657046.jpg?k=81cb87722c93c525b61657cb8c7a52ca88ca90ca8270b065f78e060f0ab7c63d&o=" data-fancybox="gallery"></a>
+        <a href="https://cf.bstatic.com/xdata/images/hotel/max1024x768/481657073.jpg?k=52b5ef72abc1437033f0d13414ebab638cfbea520566350d07e82173f6f8fd83&o=" data-fancybox="gallery"></a>
+        <a href="https://cf.bstatic.com/xdata/images/hotel/max1024x768/481656965.jpg?k=4fbacb687e42c858b663816889be52e3f62e05432456a8bd375ae06a19010a6a&o=" data-fancybox="gallery"></a>
+        <a href="https://cf.bstatic.com/xdata/images/hotel/max1024x768/698461939.jpg?k=59bbee310d535db69280ff1ef5bf71d1c59a8fd7aa394ecef48ce120aaecd23b&o=" data-fancybox="gallery"></a>
+        <a href="https://cf.bstatic.com/xdata/images/hotel/max1024x768/698464116.jpg?k=7c2cd068369e1f238ca4f0535c37c12d705acc7a568e666659fe6eb466e22a11&o=" data-fancybox="gallery"></a>
+        <a href="https://cf.bstatic.com/xdata/images/hotel/max1024x768/428242211.jpg?k=1e8ec589989314519aedbd6b4a3a03d28586788797807b8ccbcc7d433dbb971b&o=" data-fancybox="gallery"></a>
+        <a href="https://cf.bstatic.com/xdata/images/hotel/max1024x768/428242248.jpg?k=2e36c8101338686769ade7144e0ece8fa75afdec241361f004d5a2218e0d05f9&o=" data-fancybox="gallery"></a>
+        <a href="https://cf.bstatic.com/xdata/images/hotel/max1024x768/428242279.jpg?k=8827f1763d831fc0de7149367893586882862efbd3a421ae59fc9ea212530a77&o=" data-fancybox="gallery"></a>
+        <a href="https://cf.bstatic.com/xdata/images/hotel/max1024x768/428242286.jpg?k=fd99c5702b81dbf2907952f1a3c56b36acde5d0940fa4b5612181a6822b67f1f&o=" data-fancybox="gallery"></a>
+        <a href="https://cf.bstatic.com/xdata/images/hotel/max1024x768/428242303.jpg?k=cf595706f2a6ab959f617ea2161511b838fa3dfb33935dafe5d8a6d55ab57733&o=" data-fancybox="gallery"></a>
+        <a href="https://cf.bstatic.com/xdata/images/hotel/max1024x768/428242328.jpg?k=78932cd6813fa01a4df6f3a5073e715fe60c0f0c0140c6b56d2ba9a64d63e240&o=" data-fancybox="gallery"></a>
+    </div>
+</div> 
+
+    <h2 id="video">Video Tour</h2>
+    <div class="video-box">
+        <video controls>
+            <source src="https://www.pexels.com/it-it/download/video/2169880/" type="video/mp4">
+            Il tuo browser non supporta il tag video.
+        </video>
+    </div>
+
+    <h2 id="servizi">Servizi della Casa</h2>
+    <ul>
+        <li>2 camere da letto con vista mare</li>
+        <li>Terrazza panoramica</li>
+        <li>Wi‑Fi gratuito</li>
+        <li>Aria condizionata</li>
+        <li>Accesso diretto alla spiaggia</li>
+    </ul>
+</main>
+
+<footer>
+    © 2026 – A due passi dal mare
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+<script>
+    Fancybox.bind("[data-fancybox]", {});
+</script>
+
+</body>
+</html>
